@@ -1,0 +1,25 @@
+version: '2'
+services:
+  go-server:
+    image: gocd/gocd-server:v18.12.0
+    ports:
+      - "8153:8153"
+      - "8154:8154"
+    volumes:
+      - ./godata/config/cruise-config.xml:/godata/config/cruise-config.xml
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+      - /usr/local/bin/docker:/usr/local/bin/docker
+      - /usr/lib64/libltdl.so.7.3.0:/usr/lib64/libltdl.so.7
+  go-agent1:
+    image: gocd/gocd-agent-ubuntu-16.04:v18.12.0
+    links:
+      - "go-server"
+    depends_on:
+      - "go-server"
+    environment:
+      AGENT_AUTO_REGISTER_KEY: '123456789abcdefgh987654321'
+      GO_SERVER_URL: https://go-server:8154/go
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:rw
+      - /usr/local/bin/docker:/usr/local/bin/docker
+      - /usr/lib64/libltdl.so.7.3.0:/usr/lib64/libltdl.so.7
