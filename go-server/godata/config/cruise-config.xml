@@ -4,9 +4,9 @@
     <backup emailOnSuccess="true" emailOnFailure="true" />
   </server>
   <agents>
-    <agent hostname="b791683b7fc1" ipaddress="172.18.0.3" uuid="e391c466-d967-4dd3-8699-8dedd5b3f50d" />
-    <agent hostname="a111aee17ae8" ipaddress="172.19.0.3" uuid="74b73844-b812-4bae-b182-cef051ae1241" />
-    <agent hostname="3e7c954a129c" ipaddress="172.20.0.3" uuid="495df044-1a77-422e-9326-3469155141f3" />
-    <agent hostname="a40bc5cb7a91" ipaddress="172.21.0.3" uuid="850f0393-34ad-422e-b45c-0cd46d7f6369" />
+    <agent hostname="2fbb5de45ea2" ipaddress="172.22.0.3" uuid="ef18ef63-94f3-4841-b786-3574d8f415f2" />
+    <agent hostname="3a0e83f0eff9" ipaddress="172.23.0.3" uuid="200fa27e-227a-4f0e-9fba-05318d5395be" />
+    <agent hostname="f84cbf9e3cda" ipaddress="172.25.0.3" uuid="8a5b158e-ad8c-4753-849e-53749ffa3854" />
+    <agent hostname="12aa9d6c4e9a" ipaddress="172.27.0.3" uuid="d8b8fcdc-c046-4c7d-a6fa-5e750d8d4ea0" />
   </agents>
 </cruise>
